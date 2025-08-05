@@ -4,6 +4,9 @@ import CTA from './CTA';
 import Testimonials from './Testimonials';
 import FaqSection from './FaqSection';
 import PricingPlans from './PricingPlans';
+import WhyChooseUs from './WhyChooseUs';
+import HowItWorks from './HowItWorks';
+
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -36,7 +39,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            Empower Your Future with <span className="text-yellow-400">KODE.DEV</span>
+            Become a Professional Developer with <span className="text-yellow-400">KODE.DEV</span>
           </motion.h1>
 
           <motion.p
@@ -69,9 +72,14 @@ export default function HomePage() {
       </section>
 
       {/* Courses Section */}
+     
       <Courses />
+      <WhyChooseUs />
+       <FaqSection />
+        <HowItWorks />
+
       <Testimonials />
-      <FaqSection />
+     
       <CTA />
       <PricingPlans />
       

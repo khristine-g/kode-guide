@@ -1,42 +1,54 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from 'react';
+import { Plus, Minus } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const faqData = [
   {
-    question: "Do I need prior experience?",
+    question: 'Do I need prior experience?',
     answer:
       "No prior experience is needed. We start from the basics and guide you step-by-step until you're building projects confidently.",
   },
   {
-    question: "How long is each course?",
+    question: 'How long is each course?',
     answer:
-      "Our courses run between 8 to 12 weeks depending on the path. Each week includes live sessions, assignments, and mentorship.",
+      'Our courses run between 8 to 12 weeks depending on the path. Each week includes live sessions, assignments, and mentorship.',
   },
   {
-    question: "Is there a certificate?",
+    question: 'Is there a certificate?',
     answer:
-      "Yes, upon completing the course and projects, you will receive a certificate of completion recognized by our community.",
+      'Yes, upon completing the course and projects, you will receive a certificate of completion recognized by our community.',
   },
   {
-    question: "What tools or setup do I need?",
+    question: 'What tools or setup do I need?',
     answer:
-      "All you need is a laptop and internet connection. We’ll guide you through setting up your coding environment using free tools.",
+      'All you need is a laptop and internet connection. We’ll guide you through setting up your coding environment using free tools.',
   },
   {
-    question: "Is this self-paced or live?",
+    question: 'Is this self-paced or live?',
     answer:
-      "It’s a blend of both. You’ll learn through structured materials and meet with mentors or instructors weekly for live support.",
+      'It’s a blend of both. You’ll learn through structured materials and meet with mentors or instructors weekly for live support.',
   },
   {
-    question: "What if I get stuck?",
+    question: 'What if I get stuck?',
     answer:
-      "You’ll have access to a private community, mentors, and weekly Q&A calls to get help whenever you’re stuck.",
+      'You’ll have access to a private community, mentors, and weekly Q&A calls to get help whenever you’re stuck.',
   },
 ];
+
+const faqItemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  }),
+};
 
 export default function FaqSection() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -45,46 +57,41 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-20 px-4 bg-[#F9FAFB]" id="faq">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        {/* Left Image */}
+    <section className="py-24 px-6 md:px-20 bg-[#F9FAFB]" id="faq">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+        {/* Left content */}
         <motion.div
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="relative w-full max-w-lg mx-auto md:mx-0"
+          viewport={{ once: false, amount: 0.4 }}
         >
-          <div className="rounded-xl overflow-hidden shadow-xl">
-            <Image
-              src="/images/kode-guide.jpg" // Replace with your image
-              alt="FAQ"
-              width={600}
-              height={400}
-              className="object-cover"
-            />
-          </div>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#1E293B] mb-4">
+            FAQs
+          </h2>
+          <h3 className="text-2xl font-semibold text-[#6C63FF] mb-4">
+            Got Questions? We Have Answers!
+          </h3>
+          <p className="text-lg text-[#475569] leading-relaxed">
+            Get answers to common questions before starting your learning journey. We've compiled helpful info so you can start with confidence.
+          </p>
         </motion.div>
 
-        {/* Right Accordion */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <h2 className="text-4xl font-extrabold text-[#1E293B] mb-6">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg text-[#475569] mb-10">
-            We've compiled answers to the most common questions about our courses.
-          </p>
-
+        {/* Right FAQ Accordion */}
+        <div>
           {faqData.map((item, index) => (
-            <div key={index} className="mb-5">
+            <motion.div
+              key={index}
+              className="mb-5"
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+              variants={faqItemVariants}
+            >
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full flex justify-between items-center text-left bg-white p-5 rounded-lg border border-[#E2E8F0] shadow-sm hover:shadow-md transition"
+                className="w-full flex justify-between items-center text-left bg-white p-5 rounded-lg border border-[#E2E8F0] shadow-sm hover:shadow-md transition duration-300"
               >
                 <span className="font-semibold text-[#1E293B] text-lg">
                   {item.question}
@@ -101,9 +108,9 @@ export default function FaqSection() {
                   <motion.div
                     key="content"
                     initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
+                    animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    transition={{ duration: 0.4, ease: 'easeInOut' }}
                     className="overflow-hidden"
                   >
                     <div className="mt-3 text-[#475569] bg-white p-5 rounded-b-lg border-t border-[#E2E8F0] text-base leading-relaxed">
@@ -112,11 +119,10 @@ export default function FaqSection() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 }
-
