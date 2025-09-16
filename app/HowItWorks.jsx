@@ -24,7 +24,7 @@ const itemVariants = {
 
 const HowItWorks = () => {
   return (
-    <section className="bg-[#0F172A] py-24 px-6 md:px-20 text-white">
+    <section className="bg-[#0F172A] py-24 px-6 md:px-20 text-white" id="about">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-20">
         {/* Content */}
         <motion.div

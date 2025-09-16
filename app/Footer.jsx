@@ -5,12 +5,12 @@ import { FaFacebookF, FaXTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a1f44] text-white pt-12 pb-6 px-6 mt-20">
+    <footer className="bg-[#0a1f44] text-white pt-12 pb-6 px-6 mt-20"id="contact">
       <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-8">
 
         {/* Brand */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">DevLaunch</h2>
+          <h2 className="text-2xl font-bold mb-4">Kode.dev</h2>
           <p className="text-sm text-gray-300">
             Empowering future developers through quality, affordable, and practical coding education.
           </p>
@@ -31,8 +31,8 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-3">Contact</h3>
           <ul className="text-sm text-gray-300 space-y-2">
-            <li>Email: info@devlaunch.com</li>
-            <li>Phone: +254 712 345 678</li>
+            <li>Email: kodedev@gmail.com</li>
+            <li>Phone: +254725952696</li>
             <li>Nairobi, Kenya</li>
           </ul>
         </div>
@@ -41,6 +41,9 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
           <div className="flex gap-4 text-xl">
+             <a href="https://www.linkedin.com/in/khristine-githige/" target="_blank" className="hover:text-yellow-400">
+              <FaLinkedinIn />
+            </a>
             <a href="https://facebook.com" target="_blank" className="hover:text-yellow-400">
               <FaFacebookF />
             </a>
@@ -50,9 +53,7 @@ export default function Footer() {
             <a href="https://instagram.com" target="_blank" className="hover:text-yellow-400">
               <FaInstagram />
             </a>
-            <a href="https://linkedin.com" target="_blank" className="hover:text-yellow-400">
-              <FaLinkedinIn />
-            </a>
+           
           </div>
         </div>
       </div>
