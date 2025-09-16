@@ -5,7 +5,7 @@ const PricingPlans = () => {
     {
       title: "1-on-1 Mentorship",
       price: "KES 10,000/month",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLScvEiKg4SCvJ5RHhed5z_rwioCCKAXwHd7UihjYpIfzi3iChA/viewform?usp=pp_url&entry.600916540=1-on-1+Mentorship", 
+      link: "https://docs.google.com/forms/d/e/1FAIpQLScvEiKg4SCvJ5RHhed5z_rwioCCKAXwHd7UihjYpIfzi3iChA/viewform?usp=pp_url&entry.1775952533=1-on-1+Mentorship", 
       features: [
         "Weekly 1-on-1 sessions",
         "Personalized guidance",
@@ -17,7 +17,7 @@ const PricingPlans = () => {
     {
       title: "Cohort Learning",
       price: "KES 5,000/month",
-      link: "https://docs.google.com/forms/d/e/1FAIpQLScvEiKg4SCvJ5RHhed5z_rwioCCKAXwHd7UihjYpIfzi3iChA/viewform?usp=pp_url&entry.600916540=Cohort+Learning", 
+      link: "https://docs.google.com/forms/d/e/1FAIpQLScvEiKg4SCvJ5RHhed5z_rwioCCKAXwHd7UihjYpIfzi3iChA/viewform?usp=pp_url&entry.1775952533=Cohort+Learning", 
       features: [
         "Live weekly classes",
         "Access to recordings",
