@@ -16,7 +16,7 @@ const PricingPlans = () => {
     },
     {
       title: "Cohort Learning",
-      price: "KES 3,000/month",
+      price: "KES 5,000/month",
       link: "https://docs.google.com/forms/d/e/1FAIpQLScvEiKg4SCvJ5RHhed5z_rwioCCKAXwHd7UihjYpIfzi3iChA/viewform?usp=pp_url&entry.600916540=Cohort+Learning", 
       features: [
         "Live weekly classes",
