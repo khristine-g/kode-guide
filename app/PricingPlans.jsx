@@ -5,6 +5,7 @@ const PricingPlans = () => {
     {
       title: "1-on-1 Mentorship",
       price: "KES 10,000/month",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLScvEiKg4SCvJ5RHhed5z_rwioCCKAXwHd7UihjYpIfzi3iChA/viewform?usp=pp_url&entry.600916540=1-on-1+Mentorship", 
       features: [
         "Weekly 1-on-1 sessions",
         "Personalized guidance",
@@ -16,6 +17,7 @@ const PricingPlans = () => {
     {
       title: "Cohort Learning",
       price: "KES 3,000/month",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLScvEiKg4SCvJ5RHhed5z_rwioCCKAXwHd7UihjYpIfzi3iChA/viewform?usp=pp_url&entry.600916540=Cohort+Learning", 
       features: [
         "Live weekly classes",
         "Access to recordings",
@@ -49,9 +51,14 @@ const PricingPlans = () => {
                   ))}
                 </ul>
               </div>
-              <button className="mt-6 bg-yellow-400 hover:bg-yellow-500 text-white py-2 px-4 rounded">
+              <a
+                href={plan.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 bg-yellow-400 hover:bg-yellow-500 text-white py-2 px-4 rounded text-center"
+              >
                 Enroll Now
-              </button>
+              </a>
             </div>
           ))}
         </div>

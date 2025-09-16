@@ -1,7 +1,7 @@
 'use client';
 import Courses from './courses/page';
 import CTA from './CTA';
-import Testimonials from './Testimonials';
+
 import FaqSection from './FaqSection';
 import PricingPlans from './PricingPlans';
 import WhyChooseUs from './WhyChooseUs';
@@ -78,7 +78,7 @@ export default function HomePage() {
        <FaqSection />
         <HowItWorks />
 
-      <Testimonials />
+     
      
       <CTA />
       <PricingPlans />
