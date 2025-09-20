@@ -60,7 +60,7 @@ export default function Footer() {
 
       {/* Bottom Text */}
       <div className="border-t border-gray-600 mt-10 pt-6 text-center text-sm text-gray-400">
-        &copy; {new Date().getFullYear()} DevLaunch. All rights reserved.
+        &copy; {new Date().getFullYear()} KodeDev. All rights reserved.
       </div>
     </footer>
   );
