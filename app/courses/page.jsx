@@ -97,11 +97,12 @@ export default function Courses() {
                     <p className="text-gray-600 text-sm mb-6">{course.long}</p>
                   </div>
                   <div>
-                    <Link href={`/courses/${course.slug}`}>
-                      <button className="bg-yellow-500 text-white px-6 py-2 rounded-full  hover:bg-yellow-600 transition duration-200">
-                        Learn More
-                      </button>
-                    </Link>
+                  <Link href={`/courses/${course.slug}`} prefetch>
+            <button className="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition duration-200">
+                 Learn More
+           </button>
+            </Link>
+
                   </div>
                 </div>
 
