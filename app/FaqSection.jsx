@@ -16,11 +16,6 @@ const faqData = [
       'Our courses run between 8 to 12 weeks depending on the path. Each week includes live sessions, assignments, and mentorship.',
   },
   {
-    question: 'Is there a certificate?',
-    answer:
-      'Yes, upon completing the course and projects, you will receive a certificate of completion recognized by our community.',
-  },
-  {
     question: 'What tools or setup do I need?',
     answer:
       'All you need is a laptop and internet connection. We’ll guide you through setting up your coding environment using free tools.',
@@ -66,15 +61,44 @@ export default function FaqSection() {
           transition={{ duration: 0.7 }}
           viewport={{ once: false, amount: 0.4 }}
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#1E293B] mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-yellow-500 mb-4">
             FAQs
           </h2>
-          <h3 className="text-2xl font-semibold text-[#6C63FF] mb-4">
+          <h3 className="text-2xl font-semibold text-yellow-500 mb-4">
             Got Questions? We Have Answers!
           </h3>
-          <p className="text-lg text-[#475569] leading-relaxed">
-            Get answers to common questions before starting your learning journey. We've compiled helpful info so you can start with confidence.
+          <p className="text-lg text-[#475569] leading-relaxed mb-6">
+            Get answers to common questions before starting your learning
+            journey. We've compiled helpful info so you can start with
+            confidence.
           </p>
+
+          {/* Extra Info List */}
+          <ul className="space-y-3 mb-6">
+            <li className="flex items-start gap-3">
+              <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></span>
+              <span className="text-[#334155] text-base">
+                Learn from industry professionals with hands-on guidance.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></span>
+              <span className="text-[#334155] text-base">
+                Access a supportive community and weekly Q&A sessions.
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></span>
+              <span className="text-[#334155] text-base">
+                Get career support and project feedback along the way.
+              </span>
+            </li>
+          </ul>
+
+          {/* CTA Button */}
+          <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-full text-lg font-medium transition">
+            Contact Us
+          </button>
         </motion.div>
 
         {/* Right FAQ Accordion */}

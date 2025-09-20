@@ -62,9 +62,9 @@ export default function HomePage() {
                 View Programs
               </button>
             </Link>
-            <Link href="#contact">
+            <Link href="https://kodedev-beta.vercel.app/">
               <button className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black font-semibold text-lg px-8 py-4 rounded-full transition">
-                Get in Touch
+                Kids Section
               </button>
             </Link>
           </motion.div>

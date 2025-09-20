@@ -98,7 +98,7 @@ export default function Courses() {
                   </div>
                   <div>
                     <Link href={`/courses/${course.slug}`}>
-                      <button className="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition duration-200">
+                      <button className="bg-yellow-500 text-white px-6 py-2 rounded-full  hover:bg-yellow-600 transition duration-200">
                         Learn More
                       </button>
                     </Link>
