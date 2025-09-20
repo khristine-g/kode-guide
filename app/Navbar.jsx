@@ -17,8 +17,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-[#0a1f44] text-white py-4 px-6 fixed top-0 w-full z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <nav className="bg-[#0a1f44] text-white py-4 fixed top-0 left-0 right-0 z-50 shadow-lg">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6">
         {/* Logo */}
         <h1 className="text-2xl font-bold text-yellow-400">KODE.DEV</h1>
 
@@ -26,7 +26,10 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-8 text-sm font-medium">
           {menuItems.map((item) => (
             <li key={item.label}>
-              <a href={item.href} className="hover:text-yellow-400 transition">
+              <a
+                href={item.href}
+                className="hover:text-yellow-400 transition"
+              >
                 {item.label}
               </a>
             </li>
@@ -53,7 +56,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="md:hidden flex flex-col items-start mt-4 px-6 space-y-4 text-sm font-medium">
+        <ul className="md:hidden flex flex-col items-start mt-4 px-6 space-y-4 text-sm font-medium bg-[#0a1f44] pb-4">
           {menuItems.map((item) => (
             <li key={item.label}>
               <a
